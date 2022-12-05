@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div class="row justify-content-center">
+            <h4>Create New Issue</h4>
+            <form [formGroup]="editTicketForm" (ngSubmit)="submit()">
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label>Summary :</label>
+                        <input name="summary" type="text" id="summary" [formControlName]="'summary'" class="form-control" placeholder="summary">
+                        <br /><br />
+                    </div>
+                    <div class="form-group row">
+                        <label>Project Name :</label>
+                        <select [formControlName]="'projectName'" id="project">
+                            <option value="default">----</option>
+                            <option *ngFor="let project of projectValues" [value]="project">
+                                {{project}}
+                            </option>
+                        </select>
+                        <br /><br />
+                    </div>
+                    <span class="form-group row">
+                        <label>Assignee :</label>
+                        <select [formControlName]="'assignee'" id="assignee">
+                            <option value="default">----</option>
+                            <option *ngFor="let user of currentUser" [value]="user">
+                                {{user}}
+                            </option>
+                        </select>
+                        <br /><br />
+                    </span>
+                    <span class="form-group row">
+                        <label>Assign To :</label>
+                        <select [formControlName]="'assignedTo'" id="assignedTo">
+                            <option value="default">----</option>
+                            <option *ngFor="let user of assignedToUsers" [value]="user">
+                                {{user}}
+                            </option>
+                        </select>
+                        <br /><br />
+                    </span>
+                    <div class="form-group row">
+                        <label>Status :</label>
+                        <select [formControlName]="'status'" id="status">
+                            <option value="default">----</option>
+                            <option *ngFor="let val of statusValues" [value]="val">
+                                {{val}}
+                            </option>
+                        </select>
+                        <br /><br />
+                    </div>
+                    <div class="form-group row">
+                        <label>Priority :</label>
+                        <select [formControlName]="'priority'" id="priority">
+                            <option value="default">----</option>
+                            <option *ngFor="let val of priorityValues" [value]="val">
+                                {{val}}
+                            </option>
+                        </select>
+                        <br /><br />
+                    </div>
+                    <div class="form-group row">
+                        <label>Create Date :</label>
+                        <input type="date" [formControlName]="'createDate'" id="createDate" name="createDate" class="form-control">
+                        <br /><br />
+                    </div>
+                    <div class="form-group row">
+                        <label>Due Date :</label>
+                        <input type="date" [formControlName]="'dueDate'" id="dueDate" name="dueDate" class="form-control">
+                        <br /><br />
+                    </div>
+                    <div class="form-group row">
+                        <label>Estimated Time :</label>
+                        <input type="number" name="estimatedTime" id="estimatedTime" [formControlName]="'estimatedTime'" class="form-control">
+                        <br /><br />
+                    </div>
+                    <div class="form-group row">
+                        <label>Actual Time :</label>
+                        <input type="number" name="actualTime" id="actualTime" [formControlName]="'actualTime'" class="form-control">
+                        <br /><br />
+                    </div>
+                    <div class="form-group row">
+                        <label>Ticket Description :</label>
+                        <br /><br />
+                        <textarea name="description" id="description" class="form-control" [formControlName]="'description'" placeholder="Please enter details of your issue" style="height: 120px;">
+                        </textarea>
+                        <br /><br />
+                    </div>
+                    <!-- <div class="form-group row">
+                        <label>Please upload attachments if any</label><br /><br />
+                        <input type="file" (change)="onFileChange($event)" name="attachment" id="attachment" [formControlName]="'attachment'"><br /><br />
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Discard</button>
+                    <button type="submit" class="btn btn-primary pull-right submit"><i class="fa fa-pencil"></i> Create</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

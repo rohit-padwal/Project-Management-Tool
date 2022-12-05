@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="ticket-details">
+    <table class="details" border="1">
+      <h5 align="right"><b>Ticket Details</b></h5>
+      <a [routerLink]="['/editTicket/', this.ticket.ticketId]" class="float-right sign-up mr-2">Edit Ticket</a>
+
+      <tr>  
+        <td>Project Name  </td><td><!--<input type="text">-->{{this.ticket.projectName}}</td>
+      </tr> 
+      <tr>  
+        <td>Create Date </td><td><!--<input type="text">-->{{this.ticket.createDate | date}}</td>
+      </tr>
+      <tr>  
+        <td>Assignee </td><td><!--<input type="text">-->{{this.ticket.assignee}}</td>
+      </tr>
+      <tr>  
+        <td>Assigned To </td><td><!--<input type="text">-->{{this.ticket.assignedTo}}</td>
+      </tr>
+      <tr>  
+        <td>Status </td><td><!--<input type="text">-->{{this.ticket.status}}</td>
+      </tr>
+      <tr>  
+        <td>Due Date </td><td><!--<input type="text">-->{{this.ticket.dueDate | date}}</td>
+      </tr>
+      <tr>  
+        <td>Priority </td><td><!--<input type="text">-->{{this.ticket.priority}}</td>
+      </tr>
+  </table>
+  </div>
+
+<div id="ticket-description">
+  <h4>Summary</h4>
+      <dt >
+        {{this.ticket.summary}}
+        <br><br>
+      </dt>
+  <table class="description">
+    <dl>
+      <h4>Description</h4>
+      <dt class="dt">
+        {{this.ticket.description}}
+      </dt>
+    </dl>
+  </table>
+  <br><br><br><br>
+  <h5 style="color: black;font-weight:10px;">Comment Section :</h5><br>
+  <form>
+    <div *ngIf="commentList?.length > 0">
+      <table>
+      <div *ngFor="let comment of commentList">
+          <tr>
+            <td><textarea id="updateComment" value="updateComment" class="update-comment" (change)="change($event)">{{comment.commentText}}</textarea></td>
+            <td class="update-comment-date">{{comment.timestamp | date:"MM-dd-yyyy hh:mm:ss"}}</td>
+            <td class="update-comment-user">{{comment.userName}}</td>
+            <td><button class="update-button" type="submit" name="update" (click)="update(comment, $event)">Update</button></td>
+            <td><button class="delete-button" type="submit" name="delete" (click)="delete(comment)">Delete</button></td>
+          </tr>
+      </div>
+    </table>
+    </div>
+  </form>
+  <form [formGroup]="addCommentForm" (ngSubmit)="submit()">
+    <textarea class="form-control" [formControlName]="'comment'" class="comment" placeholder="Drop a comment...">
+    </textarea><br>
+    <button type="submit" name="submit" style="margin-bottom: 30px;margin-left: 20px;">Submit</button>
+</form>
+</div>
+</body>

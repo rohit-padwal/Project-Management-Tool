@@ -1,0 +1,37 @@
+<header>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-color">
+
+    <div class="flex-grow-1">
+
+      <a aria-label="Home" class="logo" routerLink="/">
+
+        <img src="./../../assets/logo1.png" style="height: 3rem; margin-left: 0.5rem;">
+
+        <span class="reddit-text">
+
+&nbsp;&nbsp;Streamline
+
+</span>
+
+      </a>
+
+    </div>
+
+    <div class="flex-grow-1 float-right">
+
+      <div *ngIf="!this.isLoggedIn">
+        <a routerLink="/signup" class="float-right sign-up mr-2">Sign up</a>
+        <a routerLink="/login" class="float-right login mr-2">Login</a>
+      </div>
+
+      <div *ngIf="this.isLoggedIn">
+        <a (click)="logout()" class="float-right login mr-2">Logout</a>
+      </div>
+      
+      
+    </div>
+
+  </nav>
+
+</header>

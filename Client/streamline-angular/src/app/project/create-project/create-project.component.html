@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div class="row justify-content-center">
+            <h4>Create New Project</h4>
+            <form [formGroup]="editProjectForm" (ngSubmit)="submit()">
+                <div class="modal-body">
+                    <div>
+                        <label>Project Name :</label>
+                        <input name="projectName" type="text" id="projectName" [formControlName]="'projectName'" class="form-control" placeholder="Project Name">
+                        <br /><br />
+                    </div>
+                    <div class="form-group row">
+                        <label>Project Users :</label>
+                        <select multiple [formControlName]="'users'" id="user">
+                            <option value="default">Select User</option>
+                            <option *ngFor="let user of users" [ngValue]="user">
+                                {{user.userName}}
+                            </option>
+                        </select>
+                        <!--ng-select
+                            [items]="users"
+                            bindLabel="userName"
+                            bindValue="userId"
+                            placeholder="Select Users"
+                            appendTo="body"
+                            [multiple]="true"
+                            [(ngModel)]="selected">
+                        </ng-select-->
+                        <br /><br />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary pull-right submit"><i class="fa fa-pencil"></i> Create</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

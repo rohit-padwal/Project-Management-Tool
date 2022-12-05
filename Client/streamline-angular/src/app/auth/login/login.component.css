@@ -1,0 +1,65 @@
+.login-section{
+    margin: 100px;
+}
+
+.subtext {
+    padding-left: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bolder;
+}
+
+.anchor-text {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.card-header{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    background: linear-gradient(to bottom right, #0079d3 0%, #53e3a6 100%);
+}
+
+.form-group{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
+}
+
+.login-failed{
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    border: 2px solid black;
+    width: 65%;    
+    color: red;
+}
+ 
+.login-failed-text{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;    
+    color: red;
+}
+.login-failed, .register-success{
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    border: 2px solid black;
+    width: 65%;    
+    color: red;
+}
+
+.login-failed-text, .register-success-text{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;    
+    color: red;
+}
+
+.login {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+}

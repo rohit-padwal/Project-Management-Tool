@@ -1,0 +1,114 @@
+body{
+  background-color: white;/* steelblue; */
+  font-family: 'Source Sans Pro', sans-serif;
+ font-size: larger;
+ font-weight: bolder;
+}
+
+ .reddit-icon-svg{
+ 
+   height: 50px;
+ 
+   padding: 8px 8px 8px 0;
+ 
+   width: 50px;
+ 
+ }
+ 
+ .ticket-details{
+     padding: 100px 100px;
+  }
+ 
+ .reddit-text{
+ 
+   font-weight: 700;
+ 
+   font-size: 20px;
+ 
+   height: 50px;
+ 
+   width: 50px;
+ 
+   color: steelblue;
+ 
+ }
+ 
+ .logo{
+ 
+   text-decoration: none;
+ 
+ }
+
+.details{
+ width: 30em;
+}
+
+.description{
+ float: left;
+}
+
+#ticket-details{
+ text-align: center;
+ border-width: 5px;
+ float: right;
+ padding: 1em;
+}
+.dt {
+  height: 200px;
+  width: 800px;
+  padding: 10px;
+  border: 3px solid #838383;
+}
+#ticket-description{
+ margin-top: 10px;
+ float: left;
+ text-align: left;
+ margin-left: 10px;
+}
+#ticket-description{
+  margin-top: 10px;
+  float: left;
+  text-align: left;
+  margin-left: 10px;
+}
+.comment {
+  height: 60px;
+  width: 300px;
+  padding: 10px;
+  border: 3px solid #838383;
+  color: #095484;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.update-comment {
+  height: 60px;
+  width: 300px;
+  padding: 10px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 3px solid #838383;
+  color: black;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.update-comment-date {
+  margin-left: 120px;
+  margin-top: 20px;
+  position: absolute;
+}
+.update-comment-user {
+  margin-left: 20px;
+  margin-top: 20px;
+  position: absolute;
+}
+.update-button {
+  margin-left: 300px;
+  margin-top: 20px;
+  position: absolute;
+}
+.delete-button {
+  margin-left: 400px;
+  margin-top: 20px;
+  position: absolute;
+}

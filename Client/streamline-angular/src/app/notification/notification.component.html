@@ -1,0 +1,29 @@
+<body>
+    <!-- <div class="center"> -->
+      <div >
+       
+        <div class="panel">
+          <div class="header">
+            <div class="menuopen">
+              <div class="menu__icon">
+                <div class="line1 stopped"></div>
+                <div class="line2 stopped"></div>
+                <div class="line3 stopped"></div>
+              </div>
+            </div>
+            <div class="header__title">Notifications</div>
+            <div class="search"><span class="fa fa-search"></span></div>
+            
+          </div>
+          <div class="content__contain">
+            <div class="line"></div>
+            <div class="noti" *ngFor="let noti of notifications">
+              <div class="circle"></div>
+              <div class="time">{{noti.createDate | date}}</div>
+              <div class="noti__text">{{noti.notificationText}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </body>
