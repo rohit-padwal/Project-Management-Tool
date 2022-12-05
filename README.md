@@ -1,4 +1,4 @@
-# Streamline - Project Management Tool
+# Project Management Tool
 ----------
 Contents
 ---------------------
