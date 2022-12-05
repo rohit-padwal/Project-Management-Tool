@@ -1,0 +1,6 @@
+
+.idea/
+
+.DS_Store
+client/.DS_Store
+client/node_modules/
